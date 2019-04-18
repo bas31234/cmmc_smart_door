@@ -416,7 +416,7 @@ static esp_err_t process_handler()
                  (uint32_t)ready_time, (uint32_t)face_time, (uint32_t)recognize_time, (uint32_t)encode_time, (uint32_t)process_time,
                  (detected) ? "DETECTED " : "", is_enrolling);
 
-        if (face_id > 0)
+        if (face_id >= 0)
         {
             gpio_set_level(GPIO_OUTPUT_IO_0, 0);
         }
